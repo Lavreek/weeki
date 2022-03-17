@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+	{% block title %}Главная страница{% endblock %}
+
+	{% block stylesheets %}
+		{{ parent() }}
+		<style>
+			::-webkit-scrollbar {
+			  width: 8px;               /* ширина scrollbar */
+			}
+			::-webkit-scrollbar-track {
+			  background: inherit;        /* цвет дорожки */
+			}
+			::-webkit-scrollbar-thumb {
+			  background-color: gray;    /* цвет плашки */
+			  border-radius: 20px;       /* закругления плашки */
+			}
+		</style>
+
+	{% endblock%}
+
+	{% block body %}
+
+		{% block header %}
+			{{ parent() }}
+		{% endblock %}
+
+		{% block main %}
+			{{ include('home_page/main.html') }}
+		{% endblock %}
+
+		{% block footer %}
+			{{ parent() }}
+		{% endblock %}
+		
+	{% endblock %}
+
+	{% block scripts %}
+		<script>
+			window.addEventListener('scroll', function() {
+				if (window.pageYOffset > 500) {
+					var scroll = document.getElementsByClassName('scroll-to-top')[0];
+					scroll.style.display = 'block';
+					// $('.scroll-to-top').css('display', 'block');
+				} 
+				else {
+					var scroll = document.getElementsByClassName('scroll-to-top')[0];
+					scroll.style.display = 'none';
+					// $('.scroll-to-top').css('display', 'none'); 
+				} 
+			});
+		</script>
+	{% endblock %}

@@ -2,6 +2,18 @@ controllers:
     resource: ../src/Controller/
     type: annotation
 
+home_page:
+    path: /
+    controller: App\Controller\HomePageController:index
+
+auth:
+    path: /Вход
+    controller: App\Controller\WeekiAuthController:index
+
+profile:
+    path: /Профиль
+    controller: App\Controller\WeekiProfileController:index
+
 kernel:
     resource: ../src/Kernel.php
     type: annotation

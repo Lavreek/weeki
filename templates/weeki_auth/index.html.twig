@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Авторизация{% endblock %}
+
+{% block body %}
+
+	{% block header %}
+		{{ parent() }}
+	{% endblock %}
+
+	{% block main %}
+
+		{% if Auth == null %}
+			{{ include('weeki_auth/main.html') }}
+		{% endif %}
+		
+	{% endblock %}
+
+	{% block footer %}
+		{{ parent() }}
+	{% endblock %}
+
+	{% block scripts %}
+		<script>
+			if (document.location.href.toString().indexOf('#access') > -1) {
+				href = document.location.href.toString().replace('#', "?");
+				history.replaceState(null, null, href);
+				window.location.reload();
+			}
+			{% if Auth == true %}
+				window.location.replace('{{ path('app_home_page') }}');
+			{% endif%}
+		</script>
+	{% endblock %}
+
+{% endblock %}

@@ -1,0 +1,18 @@
+<header class="mb-auto text-white">
+	<div class="navbar navbar-dark shadow-sm" style="background: #6c2d2c;">
+		<div class="container">
+			<div class="navbar-brand d-flex align-items-center nav-masthead">
+				<a href="http://yourdwell.ru/">
+					<h5 class="nav-link float-md-start mb-0">YD</h5>
+				</a>
+				<h5 class="px-2">/</h5>
+				<a href="{{ path('app_home_page') }}">
+					<h5 class="nav-link active float-md-start mb-0">WEEKI</h5>
+				</a>
+			</div>
+			<nav class="nav nav-masthead justify-content-center float-md-end">
+				{{ HeaderLinks(Route, Auth) }}
+			</nav>
+		</div>
+	</div>
+</header>

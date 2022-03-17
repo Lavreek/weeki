@@ -1,0 +1,20 @@
+<main>
+	<div class="scroll-to-top container-fluid px-5 py-5 fixed-bottom" style="display: none;">
+		<div class="row justify-content-start ">
+			<div class="col-md-auto">
+				<a href="#">
+					<img src="resources/up.svg">
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="row justify-content-end w-100">
+		<div class="col-md-auto">
+			<a href="." class="nav-link lead"><h5>Скачать весь каталог (Demo)</h5></a>
+		</div>
+	</div>
+
+	<div class="container-sm" style="overflow-x: hidden; overflow-y: auto;">
+		{{  FolderResources(folder_items) }}
+	</div>
+</main>

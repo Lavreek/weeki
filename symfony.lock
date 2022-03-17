@@ -1,4 +1,7 @@
 {
+    "arhitector/yandex": {
+        "version": "1.2"
+    },
     "doctrine/annotations": {
         "version": "1.13",
         "recipe": {
@@ -88,6 +91,9 @@
     },
     "nikic/php-parser": {
         "version": "v4.13.2"
+    },
+    "php-curl-class/php-curl-class": {
+        "version": "3.6.7"
     },
     "phpdocumentor/reflection-common": {
         "version": "2.2.0"

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Добро пожаловать, пожалуйста авторизуйтесь! ☺{% endblock %}
+
+{% block body %}
+
+	{% block header %} {{ parent() }} {% endblock %}
+
+	{% block main %} {{ include('not_auth/main.html') }} {% endblock %}
+
+	{% block footer %} {{ parent() }} {% endblock %}
+
+{% endblock %}

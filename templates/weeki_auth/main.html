@@ -1,0 +1,25 @@
+<main class="h-100 py-5">
+    <div class="container text-center w-50 py-5">
+        <h1 class="h3 mb-3 fw-normal">Войти используя быструю авторизацию</h1>
+        <div class="form-floating">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" disabled>
+            <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" disabled>
+            <label for="floatingPassword">Password</label>
+        </div>
+        <div class="checkbox mb-3">
+            <label><input type="checkbox" value="remember-me" disabled> Remember me </label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary" href="." disabled> Войти</button>
+    </div>
+    <div class="container">
+        <h5 class="text-center lead py-3">Войти с помощью Яндекс ID</h5>
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <a href="{{ oAuth_query }}"><img class="rounded-circle" width="32" height="32" src="/logo/yandex.svg"></a>
+            </div>
+        </div>
+    </div>
+</main>

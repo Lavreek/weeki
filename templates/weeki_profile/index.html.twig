@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello WeekiProfileController!{% endblock %}
+
+{% block body %}
+
+	{% block header %} {{ parent() }} {% endblock %}
+	{% block main %} {{ include('weeki_profile/main.html') }} {% endblock %}
+	{% block footer %} {{ parent() }} {% endblock %}
+
+
+{% endblock %}
